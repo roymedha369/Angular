@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { OnboardingComponent } from './onboarding/onboarding.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -20,7 +21,7 @@ import { OnboardingService } from './onboarding/onboarding.service';
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [OnboardingService],
   bootstrap: [OnboardingComponent]

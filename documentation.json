@@ -318,7 +318,72 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "\n\n<div class=\"container\">\n    <h1>Onboarding</h1>\n    <br>\n    <br>\n    <br>\n    <br>\n    <form [formGroup]=\"employeeForm\">\n        <div class=\"card employeeInf\">\n            <div class=\"card-header\">Employee Information</div>\n            <div class=\"card-body\">\n            <div class=\"form-group\">\n            <div class=\"row\">\n                <div class=\"col-md-6 label\">\n                    <label><img [src]=\"employeeInfo.value==''? errorImage:tickImage\"  (click)=\"employeeInfo.click()\" width=\"30px\" height=\"30px\"> Employee Identification</label>\n                    </div>\n                    <div class=\"col-md-2 offset-md-4\">\n                        <input style=\"display: none\" type=\"file\" class=\"form-control\" formControlName=\"employeeInfo\" accept=\"application/msword,application/pdf\" #employeeInfo>\n                        <img [src]=\"employeeInfo.value==''? uploadImg:downloadImg\" class=\"image\" (click)=\"employeeInfo.click()\" width=\"30px\" height=\"30px\">\n                        </div>\n                </div>\n            </div>\n\n            <div class=\"form-group\">\n                <div class=\"row\">\n                    <div class=\"col-md-6 label\">\n                        <label><img [src]=\"socialSecurity.value==''? errorImage:tickImage\"  (click)=\"employeeInfo.click()\" width=\"30px\" height=\"30px\"> Employee Social Security Information</label>\n                        </div>\n                        <div class=\"col-md-2 offset-md-4\">\n                            <input style=\"display: none\" type=\"file\" class=\"form-control\" formControlName=\"socialSecurity\" accept=\"application/msword,application/pdf\" #socialSecurity>\n                            <img [src]=\"socialSecurity.value==''? uploadImg:downloadImg\" class=\"image\" (click)=\"socialSecurity.click()\" width=\"30px\" height=\"30px\">\n                            </div>\n                    </div>\n                </div>\n        </div>\n    </div>\n</form>\n\n\n\n<form [formGroup]=\"taxForm\">\n    <div class=\"card\">\n        <div class=\"card-header\">Tax Documents</div>\n        <div class=\"card-body\">\n        <div class=\"form-group\">\n        <div class=\"row\">\n            <div class=\"col-md-6 label\">\n                <label><img [src]=\"employeeCF.value==''? errorImage:tickImage\"  (click)=\"employeeInfo.click()\" width=\"30px\" height=\"30px\"> Employee Corporation Filing</label>\n                </div>\n                <div class=\"col-md-2 offset-md-4\">\n                    <input style=\"display: none\" type=\"file\" class=\"form-control\" formControlName=\"employeeCF\" accept=\"application/msword,application/pdf\" #employeeCF>\n                    <img [src]=\"employeeCF.value==''? uploadImg:downloadImg\" class=\"image\"  (click)=\"employeeCF.click()\" width=\"30px\" height=\"30px\">\n                    </div>\n            </div>\n        </div>\n\n        <div class=\"form-group\">\n            <div class=\"row\">\n                <div class=\"col-md-6 label\">\n                    <label><img [src]=\"employeeTF.value==''? errorImage:tickImage\"  (click)=\"employeeInfo.click()\" width=\"30px\" height=\"30px\"> Employee Tax Filing</label>\n                    </div>\n                    <div class=\"col-md-2 offset-md-4\">\n                        <input style=\"display: none\" type=\"file\" class=\"form-control\" formControlName=\"employeeTF\"accept=\"application/msword,application/pdf\"  #employeeTF>\n                        <img [src]=\"employeeTF.value==''? uploadImg:downloadImg\" class=\"image\" (click)=\"employeeTF.click()\" width=\"30px\" height=\"30px\">\n                        </div>\n                </div>\n            </div>\n\n            <div class=\"form-group\">\n                <div class=\"row\">\n                    <div class=\"col-md-6 label\">\n                        <label><img [src]=\"employerBC.value==''? errorImage:tickImage\"  (click)=\"employeeInfo.click()\" width=\"30px\" height=\"30px\"> Employer banker contract</label>\n                        </div>\n                        <div class=\"col-md-2 offset-md-4\">\n                            <input style=\"display: none\" type=\"file\" class=\"form-control\" formControlName=\"employerBC\" accept=\"application/msword,application/pdf\"  #employerBC>\n                            <img [src]=\"employerBC.value==''? uploadImg:downloadImg\" class=\"image\" (click)=\"employerBC.click()\" width=\"30px\" height=\"30px\">\n                            </div>\n                    </div>\n                </div>\n    </div>\n</div>\n</form>\n\n\n\n<form [formGroup]=\"insuranceForm\">\n    <div class=\"card\">\n        <div class=\"card-header\">Insurance Documents</div>\n        <div class=\"card-body\">\n        <div class=\"form-group\">\n        <div class=\"row\">\n            <div class=\"col-md-6 label\">\n                <label><img [src]=\"healthIC.value==''? errorImage:tickImage\"  (click)=\"employeeInfo.click()\" width=\"30px\" height=\"30px\"> Health insurance contract</label>\n                </div>\n                <div class=\"col-md-2 offset-md-4\">\n                    <input style=\"display: none\" type=\"file\" class=\"form-control\" formControlName=\"healthIC\" accept=\"application/msword,application/pdf\" #healthIC>\n                    <img [src]=\"healthIC.value==''? uploadImg:downloadImg\" class=\"image\"  (click)=\"healthIC.click()\" width=\"30px\" height=\"30px\">\n                    </div>\n            </div>\n        </div>\n\n        <div class=\"form-group\">\n            <div class=\"row\">\n                <div class=\"col-md-6 label\">\n                    <label><img [src]=\"disabilityIC.value==''? errorImage:tickImage\"  (click)=\"employeeInfo.click()\" width=\"30px\" height=\"30px\"> Disability insurance contract</label>\n                    </div>\n                    <div class=\"col-md-2 offset-md-4\">\n                        <input style=\"display: none\" type=\"file\" class=\"form-control\" formControlName=\"disabilityIC\" accept=\"application/msword,application/pdf\" #disabilityIC>\n                        <img [src]=\"disabilityIC.value==''? uploadImg:downloadImg\" class=\"image\" (click)=\"disabilityIC.click()\" width=\"30px\" height=\"30px\">\n                        </div>\n                </div>\n            </div>\n\n            <div class=\"form-group\">\n                <div class=\"row\">\n                    <div class=\"col-md-6 label\">\n                        <label><img [src]=\"dentalAndVision.value==''? errorImage:tickImage\"  (click)=\"employeeInfo.click()\" width=\"30px\" height=\"30px\"> Vision terms</label>\n                        </div>\n                        <div class=\"col-md-2 offset-md-4\">\n                            <input style=\"display: none\" type=\"file\" class=\"form-control\" formControlName=\"dentalAndVision\" accept=\"application/msword,application/pdf\" #dentalAndVision>\n                            <img [src]=\"dentalAndVision.value==''? uploadImg:downloadImg\" class=\"image\" (click)=\"dentalAndVision.click()\" width=\"30px\" height=\"30px\">\n                            </div>\n                    </div>\n                </div>\n    </div>\n</div>\n</form>\n\n</div>\n"
+            "templateData": "\n\n<div class=\"container\">\n\n    <br>\n    <form [formGroup]=\"employeeForm\">\n        <div class=\"card employeeInf\">\n            <div class=\"card-header\">Employee Information</div>\n            <div class=\"card-body\">\n            <div class=\"form-group\">\n            <div class=\"row\">\n                <div class=\"col-md-6 label\">\n                    <label><img [src]=\"employeeInfo.value==''? errorImage:tickImage\"  (click)=\"employeeInfo.click()\" width=\"30px\" height=\"30px\"> Employee Identification</label>\n                    </div>\n                    <div class=\"col-md-2 offset-md-4\">\n                        <input style=\"display: none\" type=\"file\" class=\"form-control\" formControlName=\"employeeInfo\" accept=\"application/msword,application/pdf\" #employeeInfo>\n                        <img [src]=\"employeeInfo.value==''? uploadImg:downloadImg\" class=\"image\" (click)=\"employeeInfo.click()\" width=\"30px\" height=\"30px\">\n                        </div>\n                </div>\n            </div>\n\n            <div class=\"form-group\">\n                <div class=\"row\">\n                    <div class=\"col-md-6 label\">\n                        <label><img [src]=\"socialSecurity.value==''? errorImage:tickImage\"  (click)=\"employeeInfo.click()\" width=\"30px\" height=\"30px\"> Employee Social Security Information</label>\n                        </div>\n                        <div class=\"col-md-2 offset-md-4\">\n                            <input style=\"display: none\" type=\"file\" class=\"form-control\" formControlName=\"socialSecurity\" accept=\"application/msword,application/pdf\" #socialSecurity>\n                            <img [src]=\"socialSecurity.value==''? uploadImg:downloadImg\" class=\"image\" (click)=\"socialSecurity.click()\" width=\"30px\" height=\"30px\">\n                            </div>\n                    </div>\n                </div>\n        </div>\n    </div>\n</form>\n\n\n\n<form [formGroup]=\"taxForm\">\n    <div class=\"card\">\n        <div class=\"card-header\">Tax Documents</div>\n        <div class=\"card-body\">\n        <div class=\"form-group\">\n        <div class=\"row\">\n            <div class=\"col-md-6 label\">\n                <label><img [src]=\"employeeCF.value==''? errorImage:tickImage\"  (click)=\"employeeInfo.click()\" width=\"30px\" height=\"30px\"> Employee Corporation Filing</label>\n                </div>\n                <div class=\"col-md-2 offset-md-4\">\n                    <input style=\"display: none\" type=\"file\" class=\"form-control\" formControlName=\"employeeCF\" accept=\"application/msword,application/pdf\" #employeeCF>\n                    <img [src]=\"employeeCF.value==''? uploadImg:downloadImg\" class=\"image\"  (click)=\"employeeCF.click()\" width=\"30px\" height=\"30px\">\n                    </div>\n            </div>\n        </div>\n\n        <div class=\"form-group\">\n            <div class=\"row\">\n                <div class=\"col-md-6 label\">\n                    <label><img [src]=\"employeeTF.value==''? errorImage:tickImage\"  (click)=\"employeeInfo.click()\" width=\"30px\" height=\"30px\"> Employee Tax Filing</label>\n                    </div>\n                    <div class=\"col-md-2 offset-md-4\">\n                        <input style=\"display: none\" type=\"file\" class=\"form-control\" formControlName=\"employeeTF\"accept=\"application/msword,application/pdf\"  #employeeTF>\n                        <img [src]=\"employeeTF.value==''? uploadImg:downloadImg\" class=\"image\" (click)=\"employeeTF.click()\" width=\"30px\" height=\"30px\">\n                        </div>\n                </div>\n            </div>\n\n            <div class=\"form-group\">\n                <div class=\"row\">\n                    <div class=\"col-md-6 label\">\n                        <label><img [src]=\"employerBC.value==''? errorImage:tickImage\"  (click)=\"employeeInfo.click()\" width=\"30px\" height=\"30px\"> Employer banker contract</label>\n                        </div>\n                        <div class=\"col-md-2 offset-md-4\">\n                            <input style=\"display: none\" type=\"file\" class=\"form-control\" formControlName=\"employerBC\" accept=\"application/msword,application/pdf\"  #employerBC>\n                            <img [src]=\"employerBC.value==''? uploadImg:downloadImg\" class=\"image\" (click)=\"employerBC.click()\" width=\"30px\" height=\"30px\">\n                            </div>\n                    </div>\n                </div>\n    </div>\n</div>\n</form>\n\n\n\n<form [formGroup]=\"insuranceForm\">\n    <div class=\"card\">\n        <div class=\"card-header\">Insurance Documents</div>\n        <div class=\"card-body\">\n        <div class=\"form-group\">\n        <div class=\"row\">\n            <div class=\"col-md-6 label\">\n                <label><img [src]=\"healthIC.value==''? errorImage:tickImage\"  (click)=\"employeeInfo.click()\" width=\"30px\" height=\"30px\"> Health insurance contract</label>\n                </div>\n                <div class=\"col-md-2 offset-md-4\">\n                    <input style=\"display: none\" type=\"file\" class=\"form-control\" formControlName=\"healthIC\" accept=\"application/msword,application/pdf\" #healthIC>\n                    <img [src]=\"healthIC.value==''? uploadImg:downloadImg\" class=\"image\"  (click)=\"healthIC.click()\" width=\"30px\" height=\"30px\">\n                    </div>\n            </div>\n        </div>\n\n        <div class=\"form-group\">\n            <div class=\"row\">\n                <div class=\"col-md-6 label\">\n                    <label><img [src]=\"disabilityIC.value==''? errorImage:tickImage\"  (click)=\"employeeInfo.click()\" width=\"30px\" height=\"30px\"> Disability insurance contract</label>\n                    </div>\n                    <div class=\"col-md-2 offset-md-4\">\n                        <input style=\"display: none\" type=\"file\" class=\"form-control\" formControlName=\"disabilityIC\" accept=\"application/msword,application/pdf\" #disabilityIC>\n                        <img [src]=\"disabilityIC.value==''? uploadImg:downloadImg\" class=\"image\" (click)=\"disabilityIC.click()\" width=\"30px\" height=\"30px\">\n                        </div>\n                </div>\n            </div>\n\n            <div class=\"form-group\">\n                <div class=\"row\">\n                    <div class=\"col-md-6 label\">\n                        <label><img [src]=\"dentalAndVision.value==''? errorImage:tickImage\"  (click)=\"employeeInfo.click()\" width=\"30px\" height=\"30px\"> Vision terms</label>\n                        </div>\n                        <div class=\"col-md-2 offset-md-4\">\n                            <input style=\"display: none\" type=\"file\" class=\"form-control\" formControlName=\"dentalAndVision\" accept=\"application/msword,application/pdf\" #dentalAndVision>\n                            <img [src]=\"dentalAndVision.value==''? uploadImg:downloadImg\" class=\"image\" (click)=\"dentalAndVision.click()\" width=\"30px\" height=\"30px\">\n                            </div>\n                    </div>\n                </div>\n    </div>\n</div>\n</form>\n\n</div>\n"
+        },
+        {
+            "name": "StepperComponent",
+            "id": "component-StepperComponent-16b98cd65dbe22e48c8150ef3d21c886",
+            "file": "src/app/stepper/stepper.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-stepper",
+            "styleUrls": [
+                "./stepper.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./stepper.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "toggle",
+                    "defaultValue": "false",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 9
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 13
+                }
+            ],
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-stepper',\n  templateUrl: './stepper.component.html',\n  styleUrls: ['./stepper.component.css']\n})\nexport class StepperComponent implements OnInit {\n  toggle:boolean= false;\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".container{\r\n    padding-top: 100px;\r\n    padding-left: 100px;\r\n  }\r\n  @media screen and (max-width: 800px){\r\n    .container{\r\n      padding-left: 0;\r\n    }\r\n}\r\n\r\n\r\n\r\n\r\n\r\n",
+                    "styleUrl": "./stepper.component.css"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "args": [],
+                "line": 9
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<div class=\"container\">\n    <h1 style=\"font-size:40px; padding:10px 30px;\">Onboarding</h1>\n    \n    <mat-horizontal-stepper labelPosition=\"bottom\" linear style=\"max-width: 800px;\" >\n      \n      <mat-step label= \"Submit docs\" completed={{toggle}}>\n          \n      <app-onboarding (OnToggle)=\"toggle=$event\"></app-onboarding>\n      \n      </mat-step>\n      \n      <mat-step label=\"Enrollment\" >\n      </mat-step>\n  \n      <mat-step label=\"Goals\" >\n      </mat-step>\n  \n      <mat-step label=\"Complete\" >\n      </mat-step>\n      \n    </mat-horizontal-stepper>\n  \n  </div>"
         }
     ],
     "modules": [
@@ -341,6 +406,9 @@
                         },
                         {
                             "name": "OnboardingComponent"
+                        },
+                        {
+                            "name": "StepperComponent"
                         }
                     ]
                 },
@@ -360,7 +428,7 @@
                     "type": "bootstrap",
                     "elements": [
                         {
-                            "name": "OnboardingComponent"
+                            "name": "StepperComponent"
                         }
                     ]
                 },
@@ -614,6 +682,15 @@
                 "name": "OnboardingService",
                 "coveragePercent": 0,
                 "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/stepper/stepper.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "StepperComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
                 "status": "low"
             },
             {

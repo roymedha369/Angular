@@ -1,0 +1,84 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import { OnboardingComponent } from '../app/onboarding/onboarding.component';
+import { moduleMetadata } from "@storybook/angular";
+import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from '../app/app-routing.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { OnboardingService } from '../app/onboarding/onboarding.service';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { APP_BASE_HREF } from '@angular/common';
+import {StepperComponent} from '../app/stepper/stepper.component'
+import {MatStepperModule} from '@angular/material/stepper';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+<Meta title="MDX/Onboarding Component" decorators={[
+    moduleMetadata({
+       declarations:[StepperComponent,OnboardingComponent],
+    imports: [
+    BrowserModule,
+    AppRoutingModule,
+    NgbModule,
+    FormsModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatStepperModule,
+  ],
+      providers: [OnboardingService,{provide: APP_BASE_HREF, useValue : '/' }]
+    }),
+]} parameters={{
+    component: StepperComponent
+}}/>
+
+# Onboarding Component 
+
+This is the Onboarding Component.
+
+## Onboarding Component
+
+Stotybook Docs allows you to mix stories and documentation in 
+[MDX Format](https://mdxjs.com/)
+
+
+
+This is roughly equivalent to SB5's `storiesOf` :
+
+```
+storiesOf('MDX|Onboarding Component',module)
+    .addParameter({component: OnboardingComponent})
+
+```
+
+
+## Stories
+
+### Stepper Form
+
+The stepper form consist of 4 steps.
+
+<Preview>
+  <Story name="Default">{{
+    component: StepperComponent,
+    template:'<app-stepper></app-stepper>',
+    props:{
+    },
+    }}    
+  </Story>
+</Preview>
+
+### Submit Documents
+
+This is the first part of the stepper form. In this, the user can uplaod the required 
+documents in .pdf or.docx format. Once the document is uploaded, the user can also download it.
+
+<Preview>
+  <Story name="Submit Documents">{{
+    component: OnboardingComponent,
+    template:'<app-onboarding></app-onboarding>',
+    props:{
+    },
+    }}    
+  </Story>
+</Preview>
+

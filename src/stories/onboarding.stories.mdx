@@ -1,4 +1,4 @@
-import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import { Meta, Story, Preview,ArgsTable  } from '@storybook/addon-docs/blocks';
 import { OnboardingComponent } from '../app/onboarding/onboarding.component';
 import { moduleMetadata } from "@storybook/angular";
 import { BrowserModule } from '@angular/platform-browser';
@@ -15,7 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 <Meta title="MDX/Onboarding Component" decorators={[
     moduleMetadata({
-       declarations:[StepperComponent,OnboardingComponent],
+    declarations:[OnboardingComponent],
     imports: [
     BrowserModule,
     AppRoutingModule,

@@ -28,7 +28,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
       providers: [OnboardingService,{provide: APP_BASE_HREF, useValue : '/' }]
     }),
 ]} parameters={{
-    component: StepperComponent
+    component: OnboardingComponent
 }}/>
 
 # Onboarding Component 
@@ -53,19 +53,6 @@ storiesOf('MDX|Onboarding Component',module)
 
 ## Stories
 
-### Stepper Form
-
-The stepper form consist of 4 steps.
-
-<Preview>
-  <Story name="Default">{{
-    component: StepperComponent,
-    template:'<app-stepper></app-stepper>',
-    props:{
-    },
-    }}    
-  </Story>
-</Preview>
 
 ### Submit Documents
 
@@ -82,3 +69,6 @@ documents in .pdf or.docx format. Once the document is uploaded, the user can al
   </Story>
 </Preview>
 
+## ArgsTable
+
+<ArgsTable of={OnboardingComponent} />

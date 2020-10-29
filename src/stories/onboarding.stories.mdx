@@ -28,18 +28,20 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
       providers: [OnboardingService,{provide: APP_BASE_HREF, useValue : '/' }]
     }),
 ]} parameters={{
-    component: OnboardingComponent
-}}/>
+    component: OnboardingComponent,
+    backgrounds: {
+    values: [
+      { name: 'red', value: '#f00' },
+      { name: 'green', value: '#0f0' },
+    ]
+}}}/>
 
 # Onboarding Component 
 
-This is the Onboarding Component.
 
-## Onboarding Component
 
 Stotybook Docs allows you to mix stories and documentation in 
 [MDX Format](https://mdxjs.com/)
-
 
 
 This is roughly equivalent to SB5's `storiesOf` :
